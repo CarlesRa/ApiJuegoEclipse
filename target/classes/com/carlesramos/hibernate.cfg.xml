@@ -9,10 +9,10 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.search.autoregister_listeners">true</property>
         <property name="hibernate.validator.apply_to_ddl">false</property>
-        <mapping resource="com/carlesramos/model/Partidas.hbm.xml"/>
-        <mapping resource="com/carlesramos/model/RankingCartas.hbm.xml"/>
-        <mapping resource="com/carlesramos/model/Cartas.hbm.xml"/>
-        <mapping resource="com/carlesramos/model/Jugadores.hbm.xml"/>
-        <mapping resource="com/carlesramos/model/RankingJugadores.hbm.xml"/>
+        <mapping resource="model/RankingCartas.hbm.xml"/>
+        <mapping resource="model/RankingJugadores.hbm.xml"/>
+        <mapping resource="model/Jugadores.hbm.xml"/>
+        <mapping resource="model/Partidas.hbm.xml"/>
+        <mapping resource="model/Cartas.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
