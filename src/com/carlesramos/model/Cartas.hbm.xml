@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 feb. 2020 13:14:38 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="juego_cartas" dynamic-insert="false" dynamic-update="false" mutable="true" name="model.Cartas" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="cartas">
+        <id name="idcarta" type="java.lang.Integer">
+            <column name="idcarta"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="marca" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="marca" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="modelo" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="modelo" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="pais" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="pais" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="motor" optimistic-lock="true" type="long" unique="false">
+            <column name="motor" not-null="true" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="potenciaKw" optimistic-lock="true" type="int" unique="false">
+            <column name="potenciaKw" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="potenciaCv" optimistic-lock="true" type="int" unique="false">
+            <column name="potenciaCv" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="numCilindros" optimistic-lock="true" type="int" unique="false">
+            <column name="numCilindros" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="velocidad" optimistic-lock="true" type="int" unique="false">
+            <column name="velocidad" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="revoluciones" optimistic-lock="true" type="int" unique="false">
+            <column name="revoluciones" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="consumo" optimistic-lock="true" type="long" unique="false">
+            <column name="consumo" not-null="true" precision="10" scale="0"/>
+        </property>
+        <one-to-one class="model.RankingCartas" constrained="false" embed-xml="true" name="rankingCartas"/>
+    </class>
+</hibernate-mapping>

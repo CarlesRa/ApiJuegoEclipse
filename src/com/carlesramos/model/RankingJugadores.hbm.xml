@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 feb. 2020 13:14:38 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="juego_cartas" dynamic-insert="false" dynamic-update="false" mutable="true" name="model.RankingJugadores" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="rankingJugadores">
+        <id name="jugador" type="string">
+            <column length="50" name="jugador"/>
+            <generator class="foreign">
+                <param name="property">jugadores</param>
+            </generator>
+        </id>
+        <one-to-one class="model.Jugadores" constrained="true" embed-xml="true" name="jugadores"/>
+        <property generated="never" lazy="false" name="partidasGanadas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="partidasGanadas"/>
+        </property>
+        <property generated="never" lazy="false" name="partidasPerdidas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="partidasPerdidas"/>
+        </property>
+        <property generated="never" lazy="false" name="partidasEmpatadas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="partidasEmpatadas"/>
+        </property>
+    </class>
+</hibernate-mapping>

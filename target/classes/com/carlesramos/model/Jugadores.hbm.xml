@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 feb. 2020 13:14:38 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="juego_cartas" dynamic-insert="false" dynamic-update="false" mutable="true" name="model.Jugadores" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="jugadores">
+        <id name="idjugador" type="string">
+            <column length="50" name="idjugador"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellido" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="apellido" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="rondasGanadas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="rondasGanadas"/>
+        </property>
+        <property generated="never" lazy="false" name="rondasPerdidas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="rondasPerdidas"/>
+        </property>
+        <property generated="never" lazy="false" name="rondasEmpatadas" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="rondasEmpatadas"/>
+        </property>
+        <one-to-one class="model.RankingJugadores" constrained="false" embed-xml="true" name="rankingJugadores"/>
+    </class>
+</hibernate-mapping>
